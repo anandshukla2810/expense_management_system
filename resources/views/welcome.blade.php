@@ -26,6 +26,6 @@
     
     <!-- content Starts here -->
     <div class="container mt-5 text-center">
-        <h1>Welcome to EdGames</h1>
+        <h1>Welcome to Expense Management System</h1>
     </div>
 @endSection
