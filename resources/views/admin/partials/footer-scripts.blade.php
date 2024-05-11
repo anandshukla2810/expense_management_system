@@ -19,7 +19,6 @@
 <script>
     $(document).ready(function(){
         url = window.location.href;
-        console.log(url);
         $('.main-sidebar a[href="' + url + '"]').addClass('active');
         $('.main-sidebar a[href="' + url + '"]').parent().parent().parent().addClass('menu-open');
         $('.main-sidebar a[href="' + url + '"]').parent().parent().css('d-block');

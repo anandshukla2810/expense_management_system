@@ -1,6 +1,6 @@
 <aside class="main-sidebar sidebar-light-indigo elevation-4">
     <!-- Brand Logo -->
-    <a href="{{url('/admin/dashboard')}}" class="brand-link">
+    <a href="{{url('/admin/dashboard')}}" class="brand-link text-decoration-none">
       {{-- <img src="#" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> --}}
       <span class="brand-text font-weight-light">EMS</span>
     </a>
@@ -19,7 +19,7 @@
 
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa fa-school"></i>
+              <i class="nav-icon fas fa fa-user"></i>
               <p>Users<i class="right fas fa-angle-left"></i></p>
             </a>
             <ul class="nav nav-treeview">
@@ -37,6 +37,154 @@
               </li>
             </ul>
           </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa fa-school"></i>
+              <p>Finsets<i class="right fas fa-angle-left"></i></p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{url('admin/finset')}}" class="nav-link">
+                  <i class="nav-icon fas fa"></i>
+                  <p>View Finsets</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url('admin/finset/create') }}" class="nav-link">
+                  <i class="nav-icon fas fa"></i>
+                  <p>Add Finset</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa fa-school"></i>
+              <p>Budget Categories<i class="right fas fa-angle-left"></i></p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route( 'budget_categories.index' ) }}" class="nav-link">
+                  <i class="nav-icon fas fa"></i>
+                  <p>View Budget Categories</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route( 'budget_categories.create' ) }}" class="nav-link">
+                  <i class="nav-icon fas fa"></i>
+                  <p>Add Budget Category</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa fa-school"></i>
+              <p>Tags<i class="right fas fa-angle-left"></i></p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route( 'tags.index' ) }}" class="nav-link">
+                  <i class="nav-icon fas fa"></i>
+                  <p>View Tags</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route( 'tags.create' ) }}" class="nav-link">
+                  <i class="nav-icon fas fa"></i>
+                  <p>Add Tag</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa fa-school"></i>
+              <p>Vendors<i class="right fas fa-angle-left"></i></p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route( 'vendors.index' ) }}" class="nav-link">
+                  <i class="nav-icon fas fa"></i>
+                  <p>View Vendors</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route( 'vendors.create' ) }}" class="nav-link">
+                  <i class="nav-icon fas fa"></i>
+                  <p>Add Vendor</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa fa-school"></i>
+              <p>Accounts<i class="right fas fa-angle-left"></i></p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route( 'accounts.index' ) }}" class="nav-link">
+                  <i class="nav-icon fas fa"></i>
+                  <p>View Accounts</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route( 'accounts.create' ) }}" class="nav-link">
+                  <i class="nav-icon fas fa"></i>
+                  <p>Add Account</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa fa-school"></i>
+              <p>Associate Groups<i class="right fas fa-angle-left"></i></p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route( 'association_groups.index' ) }}" class="nav-link">
+                  <i class="nav-icon fas fa"></i>
+                  <p>View Associate Groups</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route( 'association_groups.create' ) }}" class="nav-link">
+                  <i class="nav-icon fas fa"></i>
+                  <p>Add Associate Group</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa fa-school"></i>
+              <p>Transactions<i class="right fas fa-angle-left"></i></p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route( 'transaction.index' ) }}" class="nav-link">
+                  <i class="nav-icon fas fa"></i>
+                  <p>View Transactions</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route( 'transaction.create' ) }}" class="nav-link">
+                  <i class="nav-icon fas fa"></i>
+                  <p>Add Transaction</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

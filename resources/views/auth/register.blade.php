@@ -13,7 +13,7 @@
                             <form id="quickForm" method="POST" action="{{ route('register') }}">
                                 @csrf
                                 <div class="form-group mb-3">
-                                    <label for="name" for="name">{{ __('Name') }} <span class="text-danger">*</span></label>
+                                    <label for="name" for="name">{{ __('Name') }} </label>
                                     <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" autocomplete="name" autofocus placeholder="Enter name">
 
                                     @error('name')
@@ -24,7 +24,7 @@
                                 </div>
                                    
                                 <div class="form-group mb-3">
-                                    <label for="email">{{ __('Email Address') }} <span class="text-danger">*</span></label>
+                                    <label for="email">{{ __('Email Address') }} </label>
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" autocomplete="email" placeholder="Enter email address">
 
                                     @error('email')
@@ -35,7 +35,7 @@
                                 </div>
 
                                 <div class="form-group mb-3">
-                                    <label for="password">{{ __('Password') }} <span class="text-danger">*</span></label>
+                                    <label for="password">{{ __('Password') }} </label>
                                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" autocomplete="new-password" placeholder="Enter password">
                                     @error('password')
                                         <span class="invalid-feedback" role="alert">
@@ -45,7 +45,7 @@
                                 </div>
 
                                 <div class="form-group mb-3">
-                                    <label for="password-confirm">{{ __('Confirm Password') }} <span class="text-danger">*</span></label>
+                                    <label for="password-confirm">{{ __('Confirm Password') }} </label>
                                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" autocomplete="new-password" placeholder="Confirm password">   
                                 </div>
 

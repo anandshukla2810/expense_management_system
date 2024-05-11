@@ -17,7 +17,7 @@
             </a>
           </li>
 
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa fa-dollar-sign"></i>
               <p>Schools<i class="right fas fa-angle-left"></i></p>
@@ -36,7 +36,7 @@
                 </a>
               </li>
             </ul>
-          </li>
+          </li> -->
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

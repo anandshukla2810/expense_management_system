@@ -23,7 +23,7 @@
     </section>
 
     <!-- Main content -->
-    <section class="content">
+    <section class="content pt-4">
       <div class="container-fluid">
         
       </div><!-- /.container-fluid -->
