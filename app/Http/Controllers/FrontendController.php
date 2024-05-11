@@ -8,6 +8,7 @@ use App\Models\ContactPage;
 use App\Models\HowItWorksPage;
 use App\Models\PaymentMethodsPage;
 use Illuminate\Validation\Validator;
+use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
 
@@ -15,6 +16,10 @@ class FrontendController extends Controller
 {
     public function homepage()
     {
-        return view('welcome');
+        if ( Auth::check() ) {
+            return view('admin.dashboard');
+        } else {
+            return view('welcome');
+        }
     }
 }
