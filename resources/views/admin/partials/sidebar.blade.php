@@ -167,6 +167,27 @@
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa fa-school"></i>
+              <p>Transaction Tag<i class="right fas fa-angle-left"></i></p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route( 'transactiontag.index' ) }}" class="nav-link">
+                  <i class="nav-icon fas fa"></i>
+                  <p>View Transaction Tag</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route( 'transactiontag.create' ) }}" class="nav-link">
+                  <i class="nav-icon fas fa"></i>
+                  <p>Add New Transaction Tag</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa fa-school"></i>
               <p>Transactions<i class="right fas fa-angle-left"></i></p>
             </a>
             <ul class="nav nav-treeview">
@@ -184,6 +205,71 @@
               </li>
             </ul>
           </li>
+
+
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa fa-school"></i>
+              <p>Sub-Transaction Tag<i class="right fas fa-angle-left"></i></p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route( 'subtransactiontag.index' ) }}" class="nav-link">
+                  <i class="nav-icon fas fa"></i>
+                  <p>View Sub-transactions Tag</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route( 'subtransactiontag.create' ) }}" class="nav-link">
+                  <i class="nav-icon fas fa"></i>
+                  <p>Add Sub-transaction Tag</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa fa-school"></i>
+              <p>Sub-Transaction<i class="right fas fa-angle-left"></i></p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route( 'subtransactions.index' ) }}" class="nav-link">
+                  <i class="nav-icon fas fa"></i>
+                  <p>View Sub-transactions</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route( 'subtransactions.create' ) }}" class="nav-link">
+                  <i class="nav-icon fas fa"></i>
+                  <p>Add New Sub-transaction</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa fa-school"></i>
+              <p>Account Value<i class="right fas fa-angle-left"></i></p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route( 'accountvalue.index' ) }}" class="nav-link">
+                  <i class="nav-icon fas fa"></i>
+                  <p>View Account Value</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route( 'accountvalue.create' ) }}" class="nav-link">
+                  <i class="nav-icon fas fa"></i>
+                  <p>Add New Account Value</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          
 
         </ul>
       </nav>

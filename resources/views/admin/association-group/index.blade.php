@@ -28,6 +28,7 @@
                                 <thead>
                                     <tr>
                                         <th width="300">Name</th>
+                                        <th width="300">ID</th>
                                         <th width="300">Finset ID</th>
                                         <!-- <th width="150">Status</th> -->
                                         <th width="150">Action</th>
@@ -37,6 +38,7 @@
                                     @foreach($association_groups as $value)
                                         <tr>
                                             <td>{{ $value->name }}</td>
+                                            <td>{{ $value->status }}</td>
                                             <td>{{ $value->finset ? $value->finset->name : 'No Finset Associated' }}</td>
                                             <!-- <td>
                                                 @if($value->status == 0)

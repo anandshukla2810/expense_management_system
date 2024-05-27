@@ -71,7 +71,6 @@ class BudgetCategoriesController extends Controller
         if ( !$current_category ) {
             abort( 404 );
         }
-
         return view( 'admin.budget-categories.edit', compact( 'budget_categories', 'finsets', 'current_category' ) );
     }
     

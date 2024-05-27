@@ -11,6 +11,12 @@ use App\Http\Controllers\VendorsController;
 use App\Http\Controllers\AccountsController;
 use App\Http\Controllers\AssociateGroupsController;
 use App\Http\Controllers\TransactionsController;
+use App\Http\Controllers\SubtransactiontagController;
+use App\Http\Controllers\SubtransactionsController;
+use App\Http\Controllers\TransactiontagController;
+use App\Http\Controllers\AccountvalueController;
+use App\Http\Controllers\TemplateController;
+use App\Http\Controllers\CsvController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +39,11 @@ Auth::routes(['verify' => true]);
 Route::get('/register', function(){
     return redirect()->route('login');
 });
+
+
+Route::resource('templates', TemplateController::class);
+Route::get('csv/upload', [CsvController::class, 'showForm'])->name('csv.upload');
+Route::post('csv/process', [CsvController::class, 'processCsv'])->name('csv.process');
 
 // Admin routes
 Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function () {
@@ -119,6 +130,16 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function 
     /**
      * Transactions Routes
      */
+    
+    Route::prefix('transaction_tag')->group(function () {
+        Route::get('/all', [TransactiontagController::class, 'index'])->name('transactiontag.index');
+        Route::get('/add', [TransactiontagController::class, 'create'])->name('transactiontag.create');
+        Route::post('/store', [TransactiontagController::class, 'store'])->name('transactiontag.store');
+        Route::get('/edit/{id}', [TransactiontagController::class, 'edit'])->name('transactiontag.edit');
+        Route::put('/update/{id}', [TransactiontagController::class, 'update'])->name('transactiontag.update');
+        Route::get('/delete/{id}', [TransactiontagController::class, 'delete'])->name('transactiontag.delete');
+    });
+    
     Route::prefix('transaction')->group(function () {
         Route::get('/all', [TransactionsController::class, 'index'])->name('transaction.index');
         Route::get('/add', [TransactionsController::class, 'create'])->name('transaction.create');
@@ -126,6 +147,32 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function 
         Route::get('/edit/{id}', [TransactionsController::class, 'edit'])->name('transaction.edit');
         Route::put('/update/{id}', [TransactionsController::class, 'update'])->name('transaction.update');
         Route::get('/delete/{id}', [TransactionsController::class, 'delete'])->name('transaction.delete');
+    });
+
+    Route::prefix('sub_transaction')->group(function () {
+        Route::get('/all', [SubtransactiontagController::class, 'index'])->name('subtransactiontag.index');
+        Route::get('/add', [SubtransactiontagController::class, 'create'])->name('subtransactiontag.create');
+        Route::post('/store', [SubtransactiontagController::class, 'store'])->name('subtransactiontag.store');
+        Route::get('/edit/{id}', [SubtransactiontagController::class, 'edit'])->name('subtransactiontag.edit');
+        Route::put('/update/{id}', [SubtransactiontagController::class, 'update'])->name('subtransactiontag.update');
+        Route::get('/delete/{id}', [SubtransactiontagController::class, 'delete'])->name('subtransactiontag.delete');
+    });
+
+    Route::prefix('sub_transactions')->group(function () {
+        Route::get('/all', [SubtransactionsController::class, 'index'])->name('subtransactions.index');
+        Route::get('/add', [SubtransactionsController::class, 'create'])->name('subtransactions.create');
+        Route::post('/store', [SubtransactionsController::class, 'store'])->name('subtransactions.store');
+        Route::get('/edit/{id}', [SubtransactionsController::class, 'edit'])->name('subtransactions.edit');
+        Route::put('/update/{id}', [SubtransactionsController::class, 'update'])->name('subtransactions.update');
+        Route::get('/delete/{id}', [SubtransactionsController::class, 'delete'])->name('subtransactions.delete');
+    });
+    Route::prefix('account_value')->group(function () {
+        Route::get('/all', [AccountvalueController::class, 'index'])->name('accountvalue.index');
+        Route::get('/add', [AccountvalueController::class, 'create'])->name('accountvalue.create');
+        Route::post('/store', [AccountvalueController::class, 'store'])->name('accountvalue.store');
+        Route::get('/edit/{id}', [AccountvalueController::class, 'edit'])->name('accountvalue.edit');
+        Route::put('/update/{id}', [AccountvalueController::class, 'update'])->name('accountvalue.update');
+        Route::get('/delete/{id}', [AccountvalueController::class, 'delete'])->name('accountvalue.delete');
     });
     
 });

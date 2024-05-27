@@ -18,6 +18,7 @@ class Country extends Model
     public function users(): HasMany{
         return $this->hasMany(User::class);
     }
+    
     public function comapnies(): HasMany{
         return $this->hasMany(Company::class);
     }
